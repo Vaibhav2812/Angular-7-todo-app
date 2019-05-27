@@ -1,0 +1,15 @@
+<div>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <fieldset class="scheduler-border">
+      <legend class="scheduler-border"> Add Todo:</legend>
+      <div *ngFor="let question of questions">
+        <app-dynamic-form-question [question]="question" [form]="form">
+        </app-dynamic-form-question>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary mr-2">Save</button>
+        <button type="reset" [routerLink]="['/todo-list']" class="btn btn-danger">Cancel</button>
+      </div>
+    </fieldset>
+  </form>
+</div>

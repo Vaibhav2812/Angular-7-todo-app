@@ -1,0 +1,13 @@
+.scheduler-border {
+    border: solid 1px #ddd !important;
+    padding: 0 10px 10px 20px;
+    border-bottom: none;
+  }
+  
+  legend.scheduler-border {
+      width: auto !important;
+      border: none !important;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 0;
+  }

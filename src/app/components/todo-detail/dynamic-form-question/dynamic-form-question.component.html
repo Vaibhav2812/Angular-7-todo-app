@@ -1,0 +1,21 @@
+<div class="form-group row" [formGroup]="form">
+  <label class="col-md-2 col-form-label" [attr.for]="question.key">{{question.label}}</label>
+  <ng-container [ngSwitch]="question.controlType">
+    <ng-container *ngSwitchCase="'textbox'">
+      <div class="col-md-5">
+        <input class="form-control" [formControlName]="question.key" [id]="question.key"
+          [type]="question.type">
+      </div>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="'dropdown'">
+      <div class="col-md-5">
+        <select class="form-control" [formControlName]="question.key">
+          <option *ngFor="let option of question.options" [value]="option.key">
+            {{option.value}}
+          </option>
+        </select>
+      </div>
+    </ng-container>
+  </ng-container>
+</div>
